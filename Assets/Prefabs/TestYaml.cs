@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using YamlDotNet.RepresentationModel;
 using YamlDotNet.Serialization;
 using Assets.Util;
-using Assets.YamlObject;
+using Assets.YamlUnityPrefab;
 
 public class TestYaml : MonoBehaviour {
 

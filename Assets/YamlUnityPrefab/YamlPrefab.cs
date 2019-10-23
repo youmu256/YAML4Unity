@@ -8,7 +8,7 @@ using Assets.Util;
 using UnityEngine;
 using YamlDotNet.RepresentationModel;
 
-namespace Assets.YamlObject
+namespace Assets.YamlUnityPrefab
 {
 
     public class YamlObjectUtil
