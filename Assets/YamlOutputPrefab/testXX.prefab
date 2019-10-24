@@ -15,6 +15,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!1 &146686
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,6 +31,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!1 &149962
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,6 +49,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!1 &155156
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,12 +59,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 441028}
   m_Layer: 0
-  m_Name: test
+  m_Name: testXX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!1 &196508
 GameObject:
   m_ObjectHideFlags: 1
@@ -77,6 +81,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!4 &420448
 Transform:
   m_ObjectHideFlags: 1
@@ -91,6 +96,7 @@ Transform:
   - {fileID: 458578}
   m_Father: {fileID: 441028}
   m_RootOrder: 0
+
 --- !u!4 &441028
 Transform:
   m_ObjectHideFlags: 1
@@ -106,6 +112,7 @@ Transform:
   - {fileID: 486158}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+
 --- !u!4 &458578
 Transform:
   m_ObjectHideFlags: 1
@@ -119,6 +126,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 420448}
   m_RootOrder: 0
+
 --- !u!4 &477868
 Transform:
   m_ObjectHideFlags: 1
@@ -132,6 +140,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 486158}
   m_RootOrder: 0
+
 --- !u!4 &486158
 Transform:
   m_ObjectHideFlags: 1
@@ -146,6 +155,7 @@ Transform:
   - {fileID: 477868}
   m_Father: {fileID: 441028}
   m_RootOrder: 1
+
 --- !u!198 &19832358
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -271,10 +281,10 @@ ParticleSystem:
           rgba: 4294967295
         key1:
           serializedVersion: 2
-          rgba: 11974399
+          rgba: 16749824
         key2:
           serializedVersion: 2
-          rgba: 4288980223
+          rgba: 4294967295
         key3:
           serializedVersion: 2
           rgba: 4287795967
@@ -290,9 +300,9 @@ ParticleSystem:
         key7:
           serializedVersion: 2
           rgba: 4294967295
-        ctime0: 5012
-        ctime1: 9445
-        ctime2: 11758
+        ctime0: 0
+        ctime1: 32768
+        ctime2: 58018
         ctime3: 14264
         ctime4: 17155
         ctime5: 22937
@@ -306,7 +316,7 @@ ParticleSystem:
         atime5: 65535
         atime6: 65535
         atime7: 65535
-        m_NumColorKeys: 8
+        m_NumColorKeys: 3
         m_NumAlphaKeys: 3
       minGradient:
         key0:
@@ -1655,6 +1665,7 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+
 --- !u!199 &19984660
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
@@ -1666,7 +1677,7 @@ ParticleSystemRenderer:
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_SubsetIndices: ''
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 0
@@ -1696,6 +1707,7 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -1707,3 +1719,4 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 155156}
   m_IsPrefabParent: 1
+

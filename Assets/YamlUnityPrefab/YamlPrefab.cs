@@ -1085,12 +1085,18 @@ namespace Assets.YamlUnityPrefab
         protected List<YamlMappingNode> NodeList;
         protected YamlStream Yaml;
         protected YamlDataContext DataContext;
+        public string PrefabPath { get; private set; }
         public YamlPrefab(string prefabPath)
         {
+            PrefabPath = prefabPath;
             var infoList = CollectBaseInfo(prefabPath);
-            var input = new StreamReader(prefabPath, Encoding.UTF8);
+            ;
             var yaml = new YamlStream();
-            yaml.Load(input);
+            
+            using (var input = new StreamReader(prefabPath, Encoding.UTF8))
+            {
+                yaml.Load(input);
+            }
             List<YamlMappingNode> nodeList = new List<YamlMappingNode>();
             for (int i = 0; i < yaml.Documents.Count; i++)
             {
@@ -1098,7 +1104,7 @@ namespace Assets.YamlUnityPrefab
             }
             Parse(yaml, infoList, nodeList);
         }
-        
+
 
         /// <summary>
         /// 在整个预制体里找对象-如果有同名则返回第一个搜索到的单位
@@ -1245,15 +1251,23 @@ namespace Assets.YamlUnityPrefab
             RootGameObject.Transofrm.RootTransofrmInit(DataContext);
         }
 
-        public void Save()
+        /// <summary>
+        /// 返回prefab本身的路径
+        /// </summary>
+        /// <returns></returns>
+        public string GetPrefabAssetPath()
         {
-            //---直接导出的格式Unity是不支持的，需要做一定的修改
-            string filePath = "Assets/YamlOutputPrefab/test.prefab";
+            return PrefabPath;
+        }
+
+        //包括了文件名和后缀名
+        public void Save(string filePath)
+        {
             using (TextWriter writer = File.CreateText(filePath))
             {
                 writer.WriteLine("%YAML 1.1");
                 writer.WriteLine("%TAG !u! tag:unity3d.com,2011:");
-                Yaml.Save(writer,false);
+                Yaml.Save(writer, false);
             }
 
             //去掉结尾...
@@ -1261,16 +1275,23 @@ namespace Assets.YamlUnityPrefab
             string content = File.ReadAllText(filePath);
             content = content.Replace("...", "");
             string pattern = @".*&.*";
-            var matches =Regex.Matches(content, pattern);
+            var matches = Regex.Matches(content, pattern);
             for (int i = 0; i < matches.Count; i++)
             {
                 string ori = matches[i].Value;
                 string toReplaced = InfoList[i].OriContent;
                 content = content.Replace(ori, toReplaced);
             }
-            File.WriteAllText(filePath,content);
+            File.WriteAllText(filePath, content);
             UnityEditor.AssetDatabase.Refresh();
             Debug.Log("======SAVE FINISH======");
+        }
+
+        public void Save()
+        {
+            //---直接导出的格式Unity是不支持的，需要做一定的修改
+            string filePath = "Assets/YamlOutputPrefab/test.prefab";
+            Save(filePath);
         }
 
         public string PrefabName
