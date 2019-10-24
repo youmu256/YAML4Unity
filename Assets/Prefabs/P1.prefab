@@ -40,7 +40,6 @@ GameObject:
   - 4: {fileID: 420448}
   - 198: {fileID: 19832358}
   - 199: {fileID: 19984660}
-  - 114: {fileID: 11484094}
   m_Layer: 0
   m_Name: P2
   m_TagString: Untagged
@@ -147,17 +146,6 @@ Transform:
   - {fileID: 477868}
   m_Father: {fileID: 441028}
   m_RootOrder: 1
---- !u!114 &11484094
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed5030ca362b90438d13bb2373d5a9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &19832358
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -371,7 +359,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 3
     startSize:
-      scalar: 1
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -394,7 +382,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 0
-      minMaxState: 0
+      minMaxState: 2
     startRotationX:
       scalar: 0
       maxCurve:
@@ -666,7 +654,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     curve:
-      scalar: 0.7853982
+      scalar: 0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -702,7 +690,7 @@ ParticleSystem:
       minMaxState: 0
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       maxGradient:
         key0:
@@ -1354,7 +1342,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     curve:
-      scalar: 0.7853982
+      scalar: 0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:

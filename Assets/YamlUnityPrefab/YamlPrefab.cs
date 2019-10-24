@@ -1019,8 +1019,29 @@ namespace Assets.YamlUnityPrefab
         {
             MinMaxMode = curve.mode;
             Scalar = curve.curveScalar;
-            MaxCurve.Apply(curve.curveMax);
-            MinCurve.Apply(curve.curveMin);
+            MinMaxMode = curve.mode;
+            Scalar = curve.curveScalar;
+            switch (curve.mode)
+            {
+                case ParticleSystemCurveMode.Constant:
+                    Scalar = curve.constantMax;
+                    MaxCurve.Apply(new AnimationCurve(new[] { new Keyframe(0, 1) }));
+                    break;
+                case ParticleSystemCurveMode.Curve:
+                    MaxCurve.Apply(curve.curveMax);
+                    break;
+                case ParticleSystemCurveMode.TwoCurves:
+                    MaxCurve.Apply(curve.curveMax);
+                    MinCurve.Apply(curve.curveMin);
+                    break;
+                case ParticleSystemCurveMode.TwoConstants:
+                    Scalar = curve.constantMax;
+                    MinCurve.Apply(new AnimationCurve(new[] { new Keyframe(0, curve.constantMin / Scalar) }));
+                    MaxCurve.Apply(new AnimationCurve(new[] { new Keyframe(0, 1) }));
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
 
