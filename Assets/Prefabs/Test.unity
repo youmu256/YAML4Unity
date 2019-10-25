@@ -124,44 +124,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: ColorModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: VelocityModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: ClampVelocityModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: InheritVelocityModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: SizeBySpeedModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: RotationModule.curve.scalar
-      value: 0.7853981
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: RotationModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: RotationBySpeedModule.curve.scalar
-      value: 0.7853981
-      objectReference: {fileID: 0}
-    - target: {fileID: 19832358, guid: ba34005894e82fb46b36656637ddb847, type: 2}
-      propertyPath: RotationBySpeedModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11484094, guid: ba34005894e82fb46b36656637ddb847, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba34005894e82fb46b36656637ddb847, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &307484048
@@ -542,35 +505,15 @@ MonoBehaviour:
       m_NumAlphaKeys: 3
     mode: 3
   StartSize:
-    constantMax: 1
-    constantMin: 1
+    constantMax: 10
+    constantMin: 5
     curveMax:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
+        value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 0
-      - time: 0.1589223
-        value: 0.46149433
-        inSlope: 1.3173372
-        outSlope: 1.3173372
-        tangentMode: 0
-      - time: 0.33586064
-        value: 0.21262115
-        inSlope: 0.9265542
-        outSlope: 0.9265542
-        tangentMode: 0
-      - time: 0.4576991
-        value: 0.85741657
-        inSlope: 1.565665
-        outSlope: 1.565665
-        tangentMode: 0
-      - time: 0.6999905
-        value: 0.46263048
-        inSlope: 0.15616417
-        outSlope: 0.15616417
         tangentMode: 0
       - time: 1
         value: 1
@@ -584,35 +527,20 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: -3.369654
-        outSlope: -3.369654
-        tangentMode: 10
-      - time: 0.15737179
-        value: 0.46971154
-        inSlope: -0.7772255
-        outSlope: -0.7772255
-        tangentMode: 10
-      - time: 0.41507825
-        value: 0.9375011
-        inSlope: -0.3532753
-        outSlope: -0.3532753
-        tangentMode: 10
-      - time: 0.6953553
-        value: 0.23071143
-        inSlope: -1.6395333
-        outSlope: -1.6395333
-        tangentMode: 10
-      - time: 1
         value: 0
-        inSlope: -0.75731313
-        outSlope: -0.75731313
-        tangentMode: 10
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
-    curveScalar: 5
-    mode: 2
+    curveScalar: 1
+    mode: 1
 --- !u!4 &916236312
 Transform:
   m_ObjectHideFlags: 0
@@ -727,8 +655,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11484094, guid: e736caa98b0d44d48be1014808e2f914, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e736caa98b0d44d48be1014808e2f914, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2039921716
